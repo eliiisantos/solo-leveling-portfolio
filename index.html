@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elijah James F. Santos | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Elijah James F. Santos, an aspiring software engineer. Projects, skills and contact details."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&family=Michroma&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="boot" id="boot" role="status" hidden>
+  <div class="win boot-win">
+    <div class="win-title"><span>System</span><span id="boot-pct">0%</span></div>
+    <div class="boot-body">
+      <p class="boot-line" id="boot-line">Initializing system</p>
+      <div class="boot-bar"><i id="boot-fill"></i></div>
+      <p class="boot-skip dim">Click anywhere to skip</p>
+    </div>
+  </div>
+</div>
+    <canvas id="motes" aria-hidden="true"></canvas>
+
+    <!-- System notification shown on first visit -->
+    <div
+      class="gate"
+      id="gate"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="gate-title"
+      aria-describedby="gate-msg"
+      hidden
+    >
+      <div class="win gate-win" id="gate-win">
+        <div class="win-title" id="gate-title"><span>Notification</span></div>
+        <div class="gate-body">
+          <p class="big" id="gate-msg" aria-live="polite">
+            You have been chosen to view this portfolio.
+          </p>
+          <p class="dim">Do you accept?</p>
+          <div class="gate-actions">
+            <button class="btn primary" id="gate-accept" type="button">
+              Accept
+            </button>
+            <button class="btn" id="gate-decline" type="button">Decline</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#top">ELI</a>
+      <nav aria-label="Main">
+        <a href="#status">Status</a>
+        <a href="#skills">Skills</a>
+        <a href="#quests">Quests</a>
+        <a href="#log">Log</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===================== HERO ===================== -->
+      <section class="hero" id="top" aria-label="Introduction">
+        <div class="hero-head">
+          <h1 class="hero-title"><span>Elijah</span> <span>Santos</span></h1>
+          <p class="hero-sub">
+            <span lang="ja">エライジャ・サントス</span>
+            <span>Aspiring software engineer</span>
+          </p>
+          <p class="hint">
+            Hover or tap to reveal the player behind the shadow.
+          </p>
+        </div>
+
+        <div class="aura"></div>
+
+        <div
+          class="jinwoo"
+          id="jinwoo"
+          tabindex="0"
+          role="img"
+          aria-label="Portrait of Sung Jinwoo. Hover, tap or focus to reveal a photo of Elijah."
+        >
+          <div class="layer base">
+            <img src="images/jinwoo.jpg" alt="" />
+            <div class="ph">
+              <span>Jinwoo image here</span><small>images/jinwoo.jpg</small>
+            </div>
+          </div>
+          <div class="layer alt">
+            <img src="images/me.jpg" alt="" />
+            <div class="ph">
+              <span>Your photo here</span><small>images/me.jpg</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="win hud hud-left" aria-label="Current quest">
+          <div class="win-title"><span>Current quest</span></div>
+          <div class="body">
+            <p>Land a software engineer role</p>
+            <p class="dim"><span class="live"></span>Open to work</p>
+          </div>
+        </aside>
+
+        <aside class="win hud hud-right" aria-label="Quick links">
+          <div class="win-title"><span>Menu</span></div>
+          <div class="body">
+            <a class="btn primary" href="#quests">View quests</a>
+            <a class="btn" href="#contact">Send message</a>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ===================== STATUS ===================== -->
+      <section class="section" id="status">
+        <h2>Status</h2>
+        <p class="lead">Who the player is and what they're looking for.</p>
+        <div class="two-col">
+          <div class="win">
+            <div class="win-title"><span>Player status</span></div>
+            <dl class="rows">
+              <div>
+                <dt>Name</dt>
+                <dd>Elijah James F. Santos</dd>
+              </div>
+              <div>
+                <dt>Job</dt>
+                <dd>Aspiring software engineer</dd>
+              </div>
+              <div>
+                <dt>Title</dt>
+                <dd>Fresh IT Graduate</dd>
+              </div>
+              <div>
+                <dt>Level</dt>
+                <dd class="level" id="player-level">1</dd>
+              </div>
+              <div>
+                <dt>Availability</dt>
+                <dd><span class="live"></span>Open to work</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="win">
+            <div class="win-title"><span>About</span></div>
+            <div class="prose">
+              <!-- TODO: replace this with your own words -->
+              <p>
+                I'm Elijah, an aspiring software engineer who likes turning
+                ideas into working web apps. I built the frontend of HanaPark, a
+                parking availability and reservation system for STI College
+                Global City, and I've also designed network infrastructure and
+                app UI/UX concepts along the way.
+              </p>
+              <p>
+                I completed a 486-hour internship at Pag-IBIG Fund earlier this
+                year and I'm now looking for my first full-time role in
+                software.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SKILLS ===================== -->
+      <section class="section" id="skills">
+        <h2>Skills</h2>
+        <p class="lead">
+          My stat sheet. Ranks go from E (just started) to S (mastered).
+        </p>
+        <div
+          class="legend"
+          aria-label="Ranks from E, the lowest, to S, the highest"
+        >
+          <span class="rank r-E">E</span><span class="rank r-D">D</span
+          ><span class="rank r-C">C</span> <span class="rank r-B">B</span
+          ><span class="rank r-A">A</span><span class="rank r-S">S</span>
+        </div>
+        <div class="skill-grid" id="skill-grid">
+          <!-- filled by script.js -->
+        </div>
+      </section>
+
+      <!-- ===================== QUESTS ===================== -->
+      <section class="section" id="quests">
+        <h2>Quests</h2>
+        <p class="lead">
+          Projects I've cleared. The rank shows how hard each one was for me at
+          the time.
+        </p>
+        <div class="quest-grid" id="quest-grid">
+          <!-- filled by script.js -->
+        </div>
+      </section>
+
+      <!-- ===================== LOG ===================== -->
+      <section class="section" id="log">
+        <h2>Quest log</h2>
+        <p class="lead">Work experience.</p>
+        <div class="log-grid">
+          <article class="win">
+            <div class="win-title">
+              <span>Internship</span><span class="dim">Completed</span>
+            </div>
+            <div class="log-entry">
+              <h3>Operations Support / Office Trainee</h3>
+              <p class="where">Pag-IBIG Fund (HDMF), SM Aura Branch</p>
+              <dl class="facts">
+                <div>
+                  <dt>Department</dt>
+                  <dd>MS II</dd>
+                </div>
+                <div>
+                  <dt>Dates</dt>
+                  <dd>Feb 16 to Jun 4, 2026</dd>
+                </div>
+                <div>
+                  <dt>Hours</dt>
+                  <dd>486</dd>
+                </div>
+                <div>
+                  <dt>School</dt>
+                  <dd>STI College Global City</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+          <aside class="win">
+            <div class="win-title"><span>New quest available</span></div>
+            <div class="open-slot">
+              <h3>Junior software engineer</h3>
+              <h4>Front-end Developer</h4>
+              <h5>UI/UX Designer</h5>
+              <h6>IT Support</h6>
+              <h7>AI Engineer</h7>
+              <p class="dim">
+                Your team could be the next entry in this log. I'm ready to
+                start.
+              </p>
+              <a class="btn primary" href="#contact">Recruit me</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ===================== CONTACT ===================== -->
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p class="lead">Send me a message.</p>
+        <div class="win">
+          <div class="win-title"><span>New message</span></div>
+          <!-- TODO: replace every placeholder link below with your real ones -->
+          <ul class="links">
+            <li class="has-copy">
+              <a href="mailto:elijahjames_santos@yahoo.com"
+                ><span>Email</span><span>elijahjames_santos@yahoo.com</span></a
+              >
+              <button
+                class="btn copy-btn"
+                type="button"
+                data-copy="elijahjames_santos@yahoo.com"
+                aria-label="Copy email address"
+              >
+                Copy
+              </button>
+            </li>
+            <li>
+              <a
+                href="https://github.com/eliiisantos"
+                target="_blank"
+                rel="noopener"
+                ><span>GitHub</span><span>github.com/eliiisantos</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/elijah-james-santos-1762a33b9?"
+                target="_blank"
+                rel="noopener"
+                ><span>LinkedIn</span
+                ><span>linkedin.com/in/elijah-james-santos</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/eljhsnts"
+                target="_blank"
+                rel="noopener"
+                ><span>Facebook</span><span>facebook.com/eljhsnts</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 Elijah James F. Santos. Inspired by the world of Solo
+        Leveling.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
