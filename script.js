@@ -1,7 +1,7 @@
 const SKILLS = [
   { group: "Frontend",  items: [["HTML", 90], ["CSS", 86], ["JavaScript", 82],, ["React", 48]] },
   { group: "Backend/Systems", items: [["Python", 60], ["Java", 60], ["C", 30], ["C#", 40]] },
-  { group: "Databases", items: [["MSSQL", 46], ["Oracle DB", 34], ["MongoDB", 40]] }
+  { group: "Databases", items: [["MSSQL", 46], ["Oracle DB", 34], ["MongoDB", 40], ["MySQL", 30]] }
 ];
 
 const QUESTS = [
