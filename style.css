@@ -1050,3 +1050,17 @@ footer {
   font-size: 0.8rem;
   text-align: center;
 }
+
+/* Phones and tablets: no circle lens, a tap reveals the whole photo */
+@media (hover: none) {
+  .jinwoo:hover {
+    --rr: 0px;
+  }
+  .jinwoo.full,
+  .jinwoo.full:hover {
+    --rr: 900px;
+  }
+  .jinwoo::after {
+    display: none;
+  }
+}
