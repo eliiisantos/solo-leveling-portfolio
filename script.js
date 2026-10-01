@@ -8,7 +8,7 @@ const QUESTS = [
   {
     name: "HanaPark",
     rank: "S",
-    role: "Frontend developer",
+    role: "Frontend developer, Documentation, Project Lead",  
     desc: "A smart web app for checking parking availability and reserving slots at STI College Global City.",
     tags: ["HTML", "CSS", "JavaScript", "React"],
     link: { url: "https://hanapark.online", label: "Open live site" }
@@ -24,7 +24,7 @@ const QUESTS = [
   {
     name: "Wayward Games Network",
     rank: "B",
-    role: "Network designer",
+    role: "Network Infrastructure Architect",
     desc: "Planned, designed and configured the network infrastructure for a 5-story building, then tested it in a network simulation.",
     tags: ["AutoCAD", "Canva", "Figma", "Cisco Packet Tracer"],
     link: { url: "wayward-games.html", label: "View case study" }
