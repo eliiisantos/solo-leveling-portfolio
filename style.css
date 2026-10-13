@@ -91,7 +91,7 @@ p {
   color: var(--dim);
 }
 
-/* ---------- The System window: the building block of the whole page ---------- */
+
 .win {
   position: relative;
   background: linear-gradient(
@@ -154,7 +154,7 @@ p {
   box-shadow: 0 0 8px var(--system);
 }
 
-/* ---------- Rank badges (E to S) ---------- */
+/* Rank badges (E to S) */
 .rank {
   --rc: var(--rank-e);
   display: inline-grid;
@@ -195,7 +195,7 @@ p {
   --rc: #a87bff;
 }
 
-/* ---------- Buttons ---------- */
+/* Buttons */
 .btn {
   font: inherit;
   font-weight: 500;
@@ -247,7 +247,7 @@ p {
   }
 }
 
-/* ---------- Top bar ---------- */
+/* Top bar */
 .topbar {
   position: fixed;
   top: 0;
@@ -296,7 +296,7 @@ p {
   border-color: var(--violet);
 }
 
-/* ---------- Hero ---------- */
+/* Hero */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -409,7 +409,7 @@ p {
   opacity: 0;
 }
 
-/* ---------- Portrait with hover reveal ---------- */
+
 @property --rr {
   syntax: "<length>";
   inherits: true;
@@ -428,7 +428,6 @@ p {
   width: min(500px, 80vw);
   aspect-ratio: 728 / 700;
   cursor: crosshair;
-  /* soft oval fade so the image edges melt into the dark page */
   -webkit-mask-image: radial-gradient(
     ellipse 58% 64% at 50% 42%,
     #000 50%,
@@ -505,7 +504,7 @@ p {
   opacity: 0;
 }
 
-/* Placeholder boxes, shown only while an image file is missing */
+
 .ph {
   display: none;
 }
@@ -538,7 +537,7 @@ p {
   color: #d7ecff;
 }
 
-/* ---------- Sections ---------- */
+/* Sections */
 .section {
   padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2.5rem) 0;
   max-width: 1180px;
@@ -845,7 +844,6 @@ footer {
   font-size: 0.88rem;
 }
 
-/* ---------- System notification (opens once per visit) ---------- */
 .gate {
   position: fixed;
   inset: 0;
@@ -931,7 +929,7 @@ footer {
   }
   .hud {
     display: none;
-  } /* keep the portrait clear on phones; the top bar has the links */
+  }
 }
 @media (hover: none) {
   .quest .glare {
@@ -952,7 +950,7 @@ footer {
     width: calc(var(--lv) * 1%);
   }
 }
-/* Copy button beside the email */
+
 .links li.has-copy {
   display: flex;
   align-items: center;
@@ -993,7 +991,7 @@ footer {
     grid-template-columns: 5.5rem auto;
   }
 }
-/* ---------- Loading screen ---------- */
+/* Loading screen */
 .boot {
   position: fixed;
   inset: 0;
@@ -1051,7 +1049,6 @@ footer {
   text-align: center;
 }
 
-/* Phones and tablets: no circle lens, a tap reveals the whole photo */
 @media (hover: none) {
   .jinwoo:hover {
     --rr: 0px;

@@ -9,9 +9,9 @@ const QUESTS = [
     name: "HanaPark",
     rank: "S",
     role: "Frontend developer, Documentation, Project Lead",  
-    desc: "A smart web app for checking parking availability and reserving slots at STI College Global City.",
+    desc: "A smart web app for checking parking availability and reserving slots at STI College Global City. The original domain has expired and now using vercel ",
     tags: ["HTML", "CSS", "JavaScript", "React"],
-    link: { url: "https://hanapark.online", label: "Open live site" }
+    link: { url: "https://hanapark.vercel.app", label: "Open live site" }
   },
      {
     name: "Professional Portfolio",
@@ -48,15 +48,11 @@ const QUESTS = [
 
 ];
 
-/* ---------------------------------------------------------------
-   2. Helpers
-   --------------------------------------------------------------- */
+
 const rankOf = lv => lv >= 95 ? "S" : lv >= 80 ? "A" : lv >= 60 ? "B" : lv >= 40 ? "C" : lv >= 20 ? "D" : "E";
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ---------------------------------------------------------------
-   3. Build the skills stat sheet
-   --------------------------------------------------------------- */
+
 const skillGrid = document.getElementById("skill-grid");
 skillGrid.innerHTML = SKILLS.map(g => `
   <section class="win skill-win">
@@ -84,9 +80,7 @@ const barObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 document.querySelectorAll(".skill-win").forEach(el => barObserver.observe(el));
 
-/* ---------------------------------------------------------------
-   4. Build the quest cards
-   --------------------------------------------------------------- */
+
 const questGrid = document.getElementById("quest-grid");
 questGrid.innerHTML = QUESTS.map(q => `
   <article class="win quest">
@@ -115,9 +109,7 @@ questGrid.querySelectorAll(".quest").forEach(card => {
   });
 });
 
-/* ---------------------------------------------------------------
-   5. Nav highlight for the section you're viewing
-   --------------------------------------------------------------- */
+
 const navLinks = [...document.querySelectorAll(".topbar nav a")];
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -129,9 +121,7 @@ const navObserver = new IntersectionObserver(entries => {
 }, { rootMargin: "-45% 0px -50% 0px" });
 document.querySelectorAll("main section[id]").forEach(s => navObserver.observe(s));
 
-/* ---------------------------------------------------------------
-   6. Portrait: hover (or tap) reveals the shadow version
-   --------------------------------------------------------------- */
+
 const portrait = document.getElementById("jinwoo");
 const hint = document.querySelector(".hint");
 
@@ -151,16 +141,14 @@ portrait.addEventListener("pointermove", e => {
   if (hint) hint.classList.add("used");
 });
 
-/* Touch screens have no hover: tap to reveal everything, tap again to hide */
+/* tap reveal mobile */
 portrait.addEventListener("pointerdown", e => {
   if (e.pointerType === "mouse") return;
   portrait.classList.toggle("full");
   if (hint) hint.classList.add("used");
 });
 
-/* ---------------------------------------------------------------
-   7. System notification (shown once per browser session)
-   --------------------------------------------------------------- */
+
 (function () {
   const hero = document.querySelector(".hero");
   const gate = document.getElementById("gate");
@@ -171,7 +159,7 @@ portrait.addEventListener("pointerdown", e => {
 
   let seen = false;
   try { seen = sessionStorage.getItem("system-accepted") === "1"; } catch (e) {}
-  if (seen) return;   // already accepted this session: show the page straight away
+  if (seen) return;   
 
   hero.classList.add("pre");
   gate.hidden = false;
@@ -186,7 +174,7 @@ portrait.addEventListener("pointerdown", e => {
 
   function onKey(e) {
     if (e.key === "Escape") close();
-    if (e.key === "Tab") {   // keep keyboard focus inside the notification
+    if (e.key === "Tab") {   
       const focusable = [accept, decline].filter(b => !b.disabled);
       const first = focusable[0], last = focusable[focusable.length - 1];
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -204,9 +192,7 @@ portrait.addEventListener("pointerdown", e => {
   });
 })();
 
-/* ---------------------------------------------------------------
-   8. Slow floating purple motes in the background
-   --------------------------------------------------------------- */
+
 (function () {
   const c = document.getElementById("motes");
   const ctx = c.getContext("2d");
@@ -303,13 +289,13 @@ portrait.addEventListener("pointerdown", e => {
     [100, "System ready"]
   ];
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var DURATION = reduce ? 10000 : 20000; // how long the bar takes, in milliseconds
+  var DURATION = reduce ? 10000 : 20000; 
   var start = performance.now();
   var loaded = document.readyState === "complete";
   var finished = false;
 
   boot.hidden = false;
-  gate.setAttribute("inert", ""); // nothing behind the loading screen can be clicked
+  gate.setAttribute("inert", ""); 
   window.addEventListener("load", function () { loaded = true; });
 
   function finish() {
