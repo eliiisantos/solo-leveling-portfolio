@@ -1,7 +1,9 @@
 const SKILLS = [
-  { group: "Frontend",  items: [["HTML", 90], ["CSS", 86], ["JavaScript", 82],, ["React", 48]] },
-  { group: "Backend/Systems", items: [["Python", 60], ["Java", 60], ["C", 30], ["C#", 40]] },
-  { group: "Databases", items: [["MSSQL", 46], ["Oracle DB", 34], ["MongoDB", 40], ["MySQL", 30]] }
+  { group: "Frontend",  items: [["HTML", 90], ["CSS", 86], ["JavaScript", 82], ["React", 73], ["Vite", 55], ["Next.js", 35]] },
+  { group: "Backend/Systems", items: [["Python", 60], ["Java", 60], ["C#", 40], ["Node.js", 50]] },
+  { group: "Databases", items: [["MSSQL", 46], ["Oracle DB", 34], ["MongoDB", 40], ["MySQL", 30]] },
+  { group: "DevOps & Deployment", items: [["GitHub", 65], ["Git", 60], ["Vercel", 55]] },
+  { group: "AI & Development Tools", items: [["VS Code", 85], ["Codex", 45], ["Claude Code", 80], ["Copilot", 50]] }
 ];
 
 const QUESTS = [
@@ -20,6 +22,14 @@ const QUESTS = [
     desc: "A Personal project that showcases my experiences and work in web development.",
     tags: ["HTML", "CSS", "JavaScript", "React", "Figma"],
     link: { url: "https://elijah-santos.vercel.app/", label: "View case study" }
+  },
+  {
+    name: "Pokécafé Planner",
+    rank: "A",
+    role: "Developer and designer",
+    desc: "A responsive, calendar-style to-do planner with a café theme. Add, edit, complete, and delete orders by day, browse a month calendar, and track your progress.",
+    tags: ["React", "Vite", "JavaScript", "CSS", "Figma"],
+    link: { url: "https://pokecafe-planner.vercel.app/", label: "Open live site" }
   },
   {
     name: "Wayward Games Network",
@@ -45,9 +55,7 @@ const QUESTS = [
     tags: ["Canva"],
     link: { url: "fempreneur.html", label: "View case study" }
   }
-
 ];
-
 
 const rankOf = lv => lv >= 95 ? "S" : lv >= 80 ? "A" : lv >= 60 ? "B" : lv >= 40 ? "C" : lv >= 20 ? "D" : "E";
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
